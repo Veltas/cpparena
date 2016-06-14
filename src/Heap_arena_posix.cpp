@@ -25,21 +25,6 @@ namespace {
       throw cpparena::Heap_arena::Error("Failed to get new arena");
     }
 
-    /*
-    bool arena_states[1000];
-    std::size_t arenas_byte_length = sizeof (arena_states);
-    if (mallctl(
-      "arenas.initialized",
-      (void*)&arena_states[0],
-      &arenas_byte_length,
-      nullptr,
-      0))
-    {
-      throw cpparena::Heap_arena::Error("Problem querying arena state");
-    }
-    assert(arena_states[arena]);
-    */
-
     return arena;
   }
 
